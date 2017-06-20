@@ -1,9 +1,4 @@
 <?php
-	$portfolio_id = $_GET['id'];
-	$portfolio_name = $_GET['name'];
-
-	$pagetitle=$portfolio_name;
-
 	include_once('header.php');
 ?>
 	<div class="container">
@@ -39,7 +34,4 @@
 <?php
 	#Well, now that everything has been added, I will include the footer and finish off the page.
 	include_once("footer.php");
-
-	#Adding Google Analytics code to monitor traffic which is brought to my website.  This will help with identifying where people are who are viewing my website which will only used for myself and no other external or third party companies.
-	include_once("analytics.php");
 ?>

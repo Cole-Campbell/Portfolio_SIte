@@ -31,7 +31,7 @@ body *{
 /*Styles Pertaining to the header & Jumbotron*/
 #mainDisplay{
 	margin-bottom:0px;
-	background-color:#333333;
+	background-color:#f9e8e7;
 	padding-top:0px;
 }
 
@@ -58,12 +58,12 @@ body *{
 }
 
 .container img {
-	border: 5px solid #333333;
+	border: 5px solid #f9e8e7;
 }
 
 .portrait{
 	margin-bottom:10px;
-	background-color: #212212;
+	background-color: #f9e8e7;
 	margin: 0px auto;
 	max-height: 400px;
 	max-width: 250px;
@@ -86,7 +86,7 @@ body *{
 }
 
 .img-circle{
-	background-color: #212212;
+	background-color: #f9e8e7;
 }
 
 /*General Elements getting you down? Well Come on in and change them how you like!

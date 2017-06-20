@@ -10,7 +10,7 @@
 <?php
 	#Setting up the query to go through the database and pull the content for my portfolio. THe content will then be added to the HTML tags to be displayed to the user.
 
-	$stmt = $conn->prepare("SELECT * FROM portfolio WHERE id = :id");
+	$stmt = $conn->prepare("SELECT * FROM development WHERE id = :id");
 
 	$stmt->execute(array(
 		':id'=> $portfolio_id));
@@ -60,13 +60,21 @@
 			echo "
 			<div class=\"col-sm-10 col-sm-push-1 description\">
 			<hr/>
-				<p class=\"socialMedia text-center\" >
-					{$codeLink}
-					{$gitLink}
-					{$vimLink}
-					{$extLink}
-				</p>
-					{$extraContent}
+				<p class=\"socialMedia text-center\" >";
+					
+					if(isset($codeLink)){
+						echo"{$codeLink}";
+					} 
+					if(isset($gitLink)){
+						echo"{$gitLink}";
+					}
+					if(isset($vimLink)){
+						echo"{$vimLink}";
+					}
+					if(isset($extLink)){
+						echo"{$extLink}";
+					}
+				echo "</p>
 					{$desc}
 				</div>
 			</div>";
@@ -92,7 +100,4 @@
 <?php
 	#Well, now that everything has been added, I will include the footer and finish off the page.
 	include_once('footer.php');
-
-	#Adding Google Analytics code to monitor traffic which is brought to my website.  This will help with identifying where people are who are viewing my website which will only used for myself and no other external or third party companies.
-	include_once("analytics.php");
 ?>

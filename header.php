@@ -2,13 +2,18 @@
 <html lang="en-eu">
 	<head>
 	<?php
-		$portfolio_id = $_GET['id'];
+		
+		if(isset($_GET['id'])){
+			$portfolio_id = $_GET['id'];
+		}
 		include_once('./db.php');
 
-		$stmt = $conn->prepare("SELECT * FROM portfolio WHERE id = :id");
+		$stmt = $conn->prepare("SELECT * FROM development WHERE id = :id");
 
-		$stmt->execute(array(
-			':id'=> $portfolio_id));
+		if(isset($_GET['id'])){
+			$stmt->execute(array(
+				':id'=> $portfolio_id));
+		}
 
 		if ($stmt->rowCount() == 1){
 			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -57,8 +62,8 @@
 		<div class="se-pre-con"></div>
 		<div class="sideNav" id="mobileNav">
 			<a class="sideNavBtn" href="./">Portfolio</a>
-			<a class="sideNavBtn" href="./about">About Me</a>
-			<a class="sideNavBtn" href="./contact">Contact Me</a>
+			<a class="sideNavBtn" href="./about.php">About Me</a>
+			<a class="sideNavBtn" href="./contact.php">Contact Me</a>
 			<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
 					<i class="fa fa-times"></i>
 			</a>
@@ -66,8 +71,8 @@
 
 		<div class="top-nav" id="main-top-nav">
 			<a href="./">Portfolio</a>
-			<a href="./about">About Me</a>
-			<a href="./contact">Contact Me</a>
+			<a href="./about.php">About Me</a>
+			<a href="./contact.php">Contact Me</a>
 		</div>
 
 		<div id="container">
