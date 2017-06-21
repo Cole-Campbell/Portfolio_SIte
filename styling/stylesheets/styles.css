@@ -155,12 +155,12 @@ img {
 
 /*Navigation Menu*/
 /* line 2, ../sass/_navigation.scss */
-.top-nav {
+.topNav {
   overflow: hidden;
   margin: 20px;
 }
 /* line 5, ../sass/_navigation.scss */
-.top-nav a {
+.topNav a {
   position: relative;
   float: left;
   display: block;
@@ -171,11 +171,11 @@ img {
   padding: 10px 10px 0px 10px;
 }
 /* line 15, ../sass/_navigation.scss */
-.top-nav a:active {
+.topNav a:active {
   color: #d47163;
 }
 /* line 18, ../sass/_navigation.scss */
-.top-nav a:before {
+.topNav a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -190,13 +190,13 @@ img {
   transition: all .3s ease-in-out 0s;
 }
 /* line 32, ../sass/_navigation.scss */
-.top-nav a:hover:before {
+.topNav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 /* line 38, ../sass/_navigation.scss */
-.top-nav .icon {
+.topNav .icon {
   display: none;
 }
 

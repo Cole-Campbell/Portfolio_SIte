@@ -64,16 +64,16 @@
 			<div class="sideNav" id="mobileNav">
 				<a class="sideNavBtn" href="./">Portfolio</a>
 				<a class="sideNavBtn" href="./about.php">About Me</a>
-				<a class="sideNavBtn" href="./contact.php">Contact Me</a>
+				<a class="sideNavBtn">Contact Me</a>
 				<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
 						<i class="fa fa-times"></i>
 				</a>
 			</div>
 
-			<div class="top-nav" id="main-top-nav">
-				<a href="./">Portfolio</a>
-				<a href="./about.php">About Me</a>
-				<a href="./contact.php">Contact Me</a>
+			<div class="topNav" id="main-top-nav" onscroll="checkScroll()">
+				<a class="links" href="./">Portfolio</a>
+				<a class="links" href="./about.php">About Me</a>
+				<a class="links" href="./contact.php">Contact Me</a>
 			</div>
 
 			<div id="container">
