@@ -52,32 +52,35 @@
 		<script async src="./js/script.js"></script>
 
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
-		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="stylesheet" href="./styling/stylesheets/styles.css">
 		<link rel="stylesheet" href="./css/font-awesome.css">
 	</head>
 	
 	<body>
 		<div class="se-pre-con"></div>
-		<div class="sideNav" id="mobileNav">
-			<a class="sideNavBtn" href="./">Portfolio</a>
-			<a class="sideNavBtn" href="./about.php">About Me</a>
-			<a class="sideNavBtn" href="./contact.php">Contact Me</a>
-			<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
-					<i class="fa fa-times"></i>
-			</a>
-		</div>
-
-		<div class="top-nav" id="main-top-nav">
-			<a href="./">Portfolio</a>
-			<a href="./about.php">About Me</a>
-			<a href="./contact.php">Contact Me</a>
-		</div>
-
-		<div id="container">
-			<div class="menuBtn">
-				<a href="javascript:void(0);" class="icon" onclick="openNav()">
-					<i class="fa fa-bars"></i>
+		<nav>
+			<div class="sideNav" id="mobileNav">
+				<a class="sideNavBtn" href="./">Portfolio</a>
+				<a class="sideNavBtn" href="./about.php">About Me</a>
+				<a class="sideNavBtn" href="./contact.php">Contact Me</a>
+				<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
+						<i class="fa fa-times"></i>
 				</a>
 			</div>
+
+			<div class="top-nav" id="main-top-nav">
+				<a href="./">Portfolio</a>
+				<a href="./about.php">About Me</a>
+				<a href="./contact.php">Contact Me</a>
+			</div>
+
+			<div id="container">
+				<div class="menuBtn">
+					<a href="javascript:void(0);" class="icon" onclick="openNav()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div>
+			</div>
+		</nav>

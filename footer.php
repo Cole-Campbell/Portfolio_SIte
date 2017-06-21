@@ -1,6 +1,6 @@
 <footer>
 	<hr>
-		<div class="socialMedia">
+		<div class="socialMedia col-12">
 			<p>
 				<a href="https://github.com/Cole-Campbell" target="_blank">
 					<i class="fa fa-github fa-2x"></i>

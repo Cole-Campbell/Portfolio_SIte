@@ -1,0 +1,74 @@
+//Variables
+$singleCell: 8.333%;
+
+//Element Widths
+.container{
+    width: 90%;
+    margin: 0px auto;
+}
+.col-1{
+    width: $singleCell;
+    height: $singleCell;
+    background-color: red;
+    float:left;
+}
+.col-2{
+    width: $singleCell * 2;
+    height: $singleCell * 2;
+    float:left;
+}
+.col-3{
+    width: $singleCell * 3;
+    height: $singleCell * 3;
+    float:left;
+}
+.col-4{
+    width: $singleCell * 4;
+    height: $singleCell * 4;
+    float:left;
+}
+.col-5{
+    width: $singleCell * 5;
+    height: $singleCell * 5;
+    float:left;
+}
+.col-6{
+    width: $singleCell * 6;
+    height: $singleCell * 6;
+    float:left;
+}
+.col-7{
+    width: $singleCell * 7;
+    height: $singleCell * 7;
+    float:left;
+}
+.col-8{
+    width: $singleCell * 8;
+    height: $singleCell * 8;
+    float:left;
+}
+.col-9{
+    width: $singleCell * 9;
+    height: $singleCell * 9;
+    float:left;
+}
+.col-10{
+    width: $singleCell * 10;
+    height: $singleCell * 10;
+    float:left;
+}
+.col-10{
+    width: $singleCell * 10;
+    height: $singleCell * 10;
+    float:left;
+}
+.col-11{
+    width: $singleCell * 11;
+    height: $singleCell * 11;
+    float:left;
+}
+.col-12{
+    width: $singleCell * 12;
+    height: $singleCell * 12;
+    float:left;
+}

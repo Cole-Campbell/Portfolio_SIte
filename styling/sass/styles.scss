@@ -1,0 +1,108 @@
+//Internal Imports
+@import 'reset', 'sizing', 'loader', 'navigation';
+//External Imports
+@import url('//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css');@font-face{font-family:'FontAwesome';src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot');src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
+url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;}
+
+//Variables Set 
+$primeColor: #d47163;
+$secondColor: #333;
+//End of Variables
+
+
+//HTML Elements
+body * {
+    transition: .3s;
+    transition-timing-function: ease-out;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+a:link, a:active, a:visited { 
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+footer{
+    min-width: 320px;
+    width: 80%;
+    clear: both;
+    margin: 0px auto;
+    hr{
+        width: 80%;
+        margin: 0px auto;
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+    }
+    .fa-heart{
+        color: $primeColor;
+    }
+}
+
+//End of HTML Elements
+
+//Social Media & Footer Content
+.socialMedia {
+    text-align: center;
+    padding: 10px 0px;
+    a{
+        color: #333;
+        margin: 5px;
+    }
+    .fa-linkedin:hover{
+        color: #0077B5;
+    }
+    .fa-github:hover{
+        color: #6e5494;
+    }
+    .fa-twitter:hover{
+        color: #55acee;
+    }
+    .fa-codepen:hover{
+        color: #0ebeff;
+    }
+    .fa-vimeo:hover{
+        color: #00adef;
+    }
+    .fa-external-link:hover, .fa-envelope:hover{
+        color: $primeColor;
+    }
+}
+
+//End of Social Media & Footer Content
+
+//Gallery Item Display
+.galleryItem{
+    padding: 5px;
+    img{
+        border: 2px solid $secondColor;
+    }
+    
+    :hover{
+        color: $primeColor;
+        border-color: $primeColor;
+    }
+
+    h4{
+        text-align: center;
+    }
+}

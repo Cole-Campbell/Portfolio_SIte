@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400,500");
+@import url("//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css");
+/* line 2, ../sass/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, ../sass/_reset.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 11, ../sass/_reset.scss */
+p, a, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Catamaran', 'sans-serif';
+}
+
+/* line 15, ../sass/_reset.scss */
+p, a {
+  color: #212212;
+}
+
+/* line 19, ../sass/_reset.scss */
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 5, ../sass/_sizing.scss */
+.container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+/* line 9, ../sass/_sizing.scss */
+.col-1 {
+  width: 8.333%;
+  height: 8.333%;
+  background-color: red;
+  float: left;
+}
+
+/* line 15, ../sass/_sizing.scss */
+.col-2 {
+  width: 16.666%;
+  height: 16.666%;
+  float: left;
+}
+
+/* line 20, ../sass/_sizing.scss */
+.col-3 {
+  width: 24.999%;
+  height: 24.999%;
+  float: left;
+}
+
+/* line 25, ../sass/_sizing.scss */
+.col-4 {
+  width: 33.332%;
+  height: 33.332%;
+  float: left;
+}
+
+/* line 30, ../sass/_sizing.scss */
+.col-5 {
+  width: 41.665%;
+  height: 41.665%;
+  float: left;
+}
+
+/* line 35, ../sass/_sizing.scss */
+.col-6 {
+  width: 49.998%;
+  height: 49.998%;
+  float: left;
+}
+
+/* line 40, ../sass/_sizing.scss */
+.col-7 {
+  width: 58.331%;
+  height: 58.331%;
+  float: left;
+}
+
+/* line 45, ../sass/_sizing.scss */
+.col-8 {
+  width: 66.664%;
+  height: 66.664%;
+  float: left;
+}
+
+/* line 50, ../sass/_sizing.scss */
+.col-9 {
+  width: 74.997%;
+  height: 74.997%;
+  float: left;
+}
+
+/* line 55, ../sass/_sizing.scss */
+.col-10 {
+  width: 83.33%;
+  height: 83.33%;
+  float: left;
+}
+
+/* line 60, ../sass/_sizing.scss */
+.col-10 {
+  width: 83.33%;
+  height: 83.33%;
+  float: left;
+}
+
+/* line 65, ../sass/_sizing.scss */
+.col-11 {
+  width: 91.663%;
+  height: 91.663%;
+  float: left;
+}
+
+/* line 70, ../sass/_sizing.scss */
+.col-12 {
+  width: 99.996%;
+  height: 99.996%;
+  float: left;
+}
+
+/* line 1, ../sass/_loader.scss */
+.no-js #loader {
+  display: none;
+}
+
+/* line 4, ../sass/_loader.scss */
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+/* line 10, ../sass/_loader.scss */
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../../media/loading.gif) center no-repeat #fff;
+  transition: 0s;
+}
+
+/*Navigation Menu*/
+/* line 2, ../sass/_navigation.scss */
+.top-nav {
+  overflow: hidden;
+  margin: 20px;
+}
+/* line 5, ../sass/_navigation.scss */
+.top-nav a {
+  position: relative;
+  float: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 10px 0px 10px;
+}
+/* line 15, ../sass/_navigation.scss */
+.top-nav a:active {
+  color: #d47163;
+}
+/* line 18, ../sass/_navigation.scss */
+.top-nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+/* line 32, ../sass/_navigation.scss */
+.top-nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/* line 38, ../sass/_navigation.scss */
+.top-nav .icon {
+  display: none;
+}
+
+/* line 43, ../sass/_navigation.scss */
+.menuBtn, .sideNav * {
+  display: none;
+}
+
+/*Menu Media Queries*/
+@media screen and (max-width: 600px) {
+  /* line 50, ../sass/_navigation.scss */
+  #main-top-nav * {
+    display: none;
+  }
+
+  /* line 54, ../sass/_navigation.scss */
+  .sideNav * {
+    display: block;
+  }
+
+  /* line 58, ../sass/_navigation.scss */
+  #container {
+    transition: 0.6s;
+    margin-top: 50px;
+  }
+
+  /* line 63, ../sass/_navigation.scss */
+  .navHolder {
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+  }
+
+  /*Navigation*/
+  /* line 70, ../sass/_navigation.scss */
+  .menuBtn {
+    display: block;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /* line 78, ../sass/_navigation.scss */
+  .menuBtn i {
+    color: #333;
+  }
+  /* line 81, ../sass/_navigation.scss */
+  .menuBtn i:hover {
+    color: #f8f8f8;
+  }
+
+  /* line 86, ../sass/_navigation.scss */
+  .sideNav {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 33, 33, 0.8);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  /* line 97, ../sass/_navigation.scss */
+  .sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #f8f8f8;
+    display: block;
+    transition: 0.3s;
+    width: 100%;
+    min-width: 300px;
+  }
+  /* line 107, ../sass/_navigation.scss */
+  .sideNav .closeBtn {
+    position: absolute;
+    top: -10px;
+    right: 17px;
+    font-size: 36px;
+    margin-left: 50px;
+    width: initial;
+    min-width: 0;
+  }
+
+  /* line 118, ../sass/_navigation.scss */
+  .sideNavBtn:hover {
+    color: #333333;
+    background-color: #f8f8f8;
+  }
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot");
+  src: url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2") format("woff2"), url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff") format("woff"), url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.ttf") format("truetype"), url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../sass/styles.scss */
+body * {
+  transition: .3s;
+  transition-timing-function: ease-out;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, ../sass/styles.scss */
+a:link, a:active, a:visited {
+  text-decoration: none;
+}
+
+/* line 28, ../sass/styles.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 32, ../sass/styles.scss */
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 37, ../sass/styles.scss */
+p {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* line 43, ../sass/styles.scss */
+footer {
+  min-width: 320px;
+  width: 80%;
+  clear: both;
+  margin: 0px auto;
+}
+/* line 48, ../sass/styles.scss */
+footer hr {
+  width: 80%;
+  margin: 0px auto;
+}
+/* line 52, ../sass/styles.scss */
+footer p {
+  text-align: center;
+  font-size: 14px;
+}
+/* line 56, ../sass/styles.scss */
+footer .fa-heart {
+  color: #d47163;
+}
+
+/* line 64, ../sass/styles.scss */
+.socialMedia {
+  text-align: center;
+  padding: 10px 0px;
+}
+/* line 67, ../sass/styles.scss */
+.socialMedia a {
+  color: #333;
+  margin: 5px;
+}
+/* line 71, ../sass/styles.scss */
+.socialMedia .fa-linkedin:hover {
+  color: #0077B5;
+}
+/* line 74, ../sass/styles.scss */
+.socialMedia .fa-github:hover {
+  color: #6e5494;
+}
+/* line 77, ../sass/styles.scss */
+.socialMedia .fa-twitter:hover {
+  color: #55acee;
+}
+/* line 80, ../sass/styles.scss */
+.socialMedia .fa-codepen:hover {
+  color: #0ebeff;
+}
+/* line 83, ../sass/styles.scss */
+.socialMedia .fa-vimeo:hover {
+  color: #00adef;
+}
+/* line 86, ../sass/styles.scss */
+.socialMedia .fa-external-link:hover, .socialMedia .fa-envelope:hover {
+  color: #d47163;
+}
+
+/* line 94, ../sass/styles.scss */
+.galleryItem {
+  padding: 5px;
+}
+/* line 96, ../sass/styles.scss */
+.galleryItem img {
+  border: 2px solid #333;
+}
+/* line 100, ../sass/styles.scss */
+.galleryItem :hover {
+  color: #d47163;
+  border-color: #d47163;
+}
+/* line 105, ../sass/styles.scss */
+.galleryItem h4 {
+  text-align: center;
+}
