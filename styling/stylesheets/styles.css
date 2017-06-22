@@ -157,9 +157,11 @@ img {
 /* line 4, ../sass/_navigation.scss */
 .topNav {
   overflow: hidden;
-  margin: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
-/* line 7, ../sass/_navigation.scss */
+/* line 9, ../sass/_navigation.scss */
 .topNav a {
   position: relative;
   float: left;
@@ -170,11 +172,11 @@ img {
   font-size: 17px;
   padding: 10px 10px 0px 10px;
 }
-/* line 17, ../sass/_navigation.scss */
+/* line 19, ../sass/_navigation.scss */
 .topNav a:active {
   color: #d47163;
 }
-/* line 20, ../sass/_navigation.scss */
+/* line 22, ../sass/_navigation.scss */
 .topNav a:before {
   content: "";
   position: absolute;
@@ -189,41 +191,35 @@ img {
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
 }
-/* line 34, ../sass/_navigation.scss */
+/* line 36, ../sass/_navigation.scss */
 .topNav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-/* line 40, ../sass/_navigation.scss */
+/* line 42, ../sass/_navigation.scss */
 .topNav .icon {
   display: none;
 }
 
-/* line 45, ../sass/_navigation.scss */
+/* line 47, ../sass/_navigation.scss */
 .menuBtn, .sideNav * {
   display: none;
 }
 
 /*Menu Media Queries*/
 @media screen and (max-width: 600px) {
-  /* line 52, ../sass/_navigation.scss */
+  /* line 54, ../sass/_navigation.scss */
   #main-top-nav * {
     display: none;
   }
 
-  /* line 56, ../sass/_navigation.scss */
+  /* line 58, ../sass/_navigation.scss */
   .sideNav * {
     display: block;
   }
 
-  /* line 60, ../sass/_navigation.scss */
-  #container {
-    transition: 0.6s;
-    margin-top: 50px;
-  }
-
-  /* line 65, ../sass/_navigation.scss */
+  /* line 62, ../sass/_navigation.scss */
   .navHolder {
     width: 100%;
     height: 30px;
@@ -231,26 +227,26 @@ img {
   }
 
   /*Navigation*/
-  /* line 72, ../sass/_navigation.scss */
+  /* line 69, ../sass/_navigation.scss */
   .menuBtn {
     display: block;
     float: right;
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
   }
-  /* line 80, ../sass/_navigation.scss */
+  /* line 77, ../sass/_navigation.scss */
   .menuBtn i {
     color: #333;
   }
-  /* line 83, ../sass/_navigation.scss */
+  /* line 80, ../sass/_navigation.scss */
   .menuBtn i:hover {
     color: #d47163;
   }
 
-  /* line 88, ../sass/_navigation.scss */
+  /* line 85, ../sass/_navigation.scss */
   .sideNav {
     height: 100%;
     width: 0%;
@@ -263,7 +259,7 @@ img {
     padding-top: 60px;
     transition: 0.5s;
   }
-  /* line 99, ../sass/_navigation.scss */
+  /* line 96, ../sass/_navigation.scss */
   .sideNav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -274,7 +270,7 @@ img {
     width: 100%;
     min-width: 300px;
   }
-  /* line 109, ../sass/_navigation.scss */
+  /* line 106, ../sass/_navigation.scss */
   .sideNav .closeBtn {
     position: absolute;
     top: -10px;
@@ -285,7 +281,7 @@ img {
     min-width: 0;
   }
 
-  /* line 120, ../sass/_navigation.scss */
+  /* line 117, ../sass/_navigation.scss */
   .sideNavBtn:hover {
     color: #333333;
     background-color: #f8f8f8;
@@ -298,9 +294,10 @@ img {
   margin: 0px auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 30px;
 }
 
-/* line 9, ../sass/_flex.scss */
+/* line 10, ../sass/_flex.scss */
 .flex-galleryItem {
   padding: 5px;
   width: 30%;
@@ -308,40 +305,45 @@ img {
   padding: 20px;
   margin: 0px auto;
 }
-/* line 15, ../sass/_flex.scss */
+/* line 16, ../sass/_flex.scss */
+.flex-galleryItem * {
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+/* line 20, ../sass/_flex.scss */
 .flex-galleryItem img {
   border: 2px solid #333;
 }
-/* line 18, ../sass/_flex.scss */
+/* line 23, ../sass/_flex.scss */
 .flex-galleryItem :hover {
   color: #d47163;
   border-color: #d47163;
 }
-/* line 22, ../sass/_flex.scss */
-.flex-galleryItem h4 {
+/* line 27, ../sass/_flex.scss */
+.flex-galleryItem h3 {
   text-align: center;
 }
 
-@media screen and (max-width: 425px) {
-  /* line 28, ../sass/_flex.scss */
+@media screen and (max-width: 597px) {
+  /* line 33, ../sass/_flex.scss */
   .flex-galleryItem {
     width: 95%;
   }
 }
-@media screen and (min-width: 426px) {
-  /* line 34, ../sass/_flex.scss */
+@media screen and (min-width: 598px) {
+  /* line 39, ../sass/_flex.scss */
   .flex-galleryItem {
     width: 47%;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 40, ../sass/_flex.scss */
+  /* line 45, ../sass/_flex.scss */
   .flex-galleryItem {
-    width: 30%;
+    width: 33%;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 46, ../sass/_flex.scss */
+  /* line 51, ../sass/_flex.scss */
   .flex-galleryItem {
     width: 25%;
   }
@@ -355,107 +357,155 @@ img {
 }
 /* line 11, ../sass/styles.scss */
 body * {
-  transition: .3s;
   transition-timing-function: ease-out;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../sass/styles.scss */
+/* line 18, ../sass/styles.scss */
+nav {
+  position: relative;
+  z-index: 10;
+  height: 38px;
+}
+
+/* line 24, ../sass/styles.scss */
 a:link, a:active, a:visited {
   text-decoration: none;
 }
 
-/* line 22, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 31, ../sass/styles.scss */
 img {
   width: 100%;
   height: 100%;
 }
 
-/* line 31, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 p {
   font-family: 'Catamaran', sans-serif;
   font-weight: 300;
   font-size: 18px;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 footer {
   min-width: 320px;
   width: 80%;
   clear: both;
   margin: 0px auto;
+  padding-bottom: 20px;
 }
-/* line 42, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 footer hr {
   width: 80%;
   margin: 0px auto;
 }
-/* line 46, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 footer p {
   text-align: center;
   font-size: 14px;
 }
-/* line 50, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 footer .fa-heart {
   color: #d47163;
 }
 
-/* line 58, ../sass/styles.scss */
-.socialMedia {
-  text-align: center;
-  padding: 10px 0px;
-}
-/* line 61, ../sass/styles.scss */
-.socialMedia a {
-  color: #333;
-  margin: 5px;
-}
 /* line 65, ../sass/styles.scss */
-.socialMedia .fa-linkedin:hover {
-  color: #0077B5;
+#bannerTop {
+  height: 363px;
+  border-bottom: 1px solid #333;
 }
 /* line 68, ../sass/styles.scss */
-.socialMedia .fa-github:hover {
-  color: #6e5494;
-}
-/* line 71, ../sass/styles.scss */
-.socialMedia .fa-twitter:hover {
-  color: #55acee;
-}
-/* line 74, ../sass/styles.scss */
-.socialMedia .fa-codepen:hover {
-  color: #0ebeff;
-}
-/* line 77, ../sass/styles.scss */
-.socialMedia .fa-vimeo:hover {
-  color: #00adef;
-}
-/* line 80, ../sass/styles.scss */
-.socialMedia .fa-external-link:hover, .socialMedia .fa-envelope:hover {
-  color: #d47163;
+#bannerTop #banner {
+  width: 100%;
+  height: 400px;
+  background: tomato;
+  position: absolute;
+  z-index: -10;
+  display: block;
+  top: 0;
+  left: 0;
+  background: url("../../media/banner.jpg");
+  background-size: cover;
+  background-position-x: center;
+  overflow: hidden;
 }
 
-/* line 88, ../sass/styles.scss */
+@media screen and (max-width: 425px) {
+  /* line 85, ../sass/styles.scss */
+  #bannerTop {
+    height: 463px;
+  }
+  /* line 87, ../sass/styles.scss */
+  #bannerTop #banner {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 94, ../sass/styles.scss */
+  #bannerTop {
+    height: 563px;
+  }
+  /* line 96, ../sass/styles.scss */
+  #bannerTop #banner {
+    height: 600px;
+  }
+}
+/* line 105, ../sass/styles.scss */
 .galleryItem {
   padding: 5px;
 }
-/* line 90, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 .galleryItem img {
   border: 2px solid #333;
 }
-/* line 94, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 .galleryItem :hover {
   color: #d47163;
   border-color: #d47163;
 }
-/* line 99, ../sass/styles.scss */
-.galleryItem h4 {
+/* line 116, ../sass/styles.scss */
+.galleryItem h3 {
   text-align: center;
+}
+
+/* line 123, ../sass/styles.scss */
+.socialMedia {
+  text-align: center;
+  padding: 10px 0px;
+}
+/* line 126, ../sass/styles.scss */
+.socialMedia a {
+  color: #333;
+  margin: 5px;
+}
+/* line 130, ../sass/styles.scss */
+.socialMedia .fa-linkedin:hover {
+  color: #0077B5;
+}
+/* line 133, ../sass/styles.scss */
+.socialMedia .fa-github:hover {
+  color: #6e5494;
+}
+/* line 136, ../sass/styles.scss */
+.socialMedia .fa-twitter:hover {
+  color: #55acee;
+}
+/* line 139, ../sass/styles.scss */
+.socialMedia .fa-codepen:hover {
+  color: #0ebeff;
+}
+/* line 142, ../sass/styles.scss */
+.socialMedia .fa-vimeo:hover {
+  color: #00adef;
+}
+/* line 145, ../sass/styles.scss */
+.socialMedia .fa-external-link:hover, .socialMedia .fa-envelope:hover {
+  color: #d47163;
 }

@@ -3,6 +3,11 @@
 	include_once('header.php');
 ?>
 
+<section id="bannerTop">
+	<div id="banner">
+	</div>
+</section>
+
 	<div class="flex-container">
 
 			<h2>Portfolio</h2>
@@ -20,7 +25,7 @@
 		echo "<div id=\"gallery\" class=\"col-4 flex-galleryItem\">
 					<a href=\"portfolio.php?id={$id}\">
 						<img class=\"img-responsive thisImg center-block\" src=\"{$thumb}\" onerror=\"imgError(this);\" alt=\"{$name}\"/>
-						<h4>{$name}</h4>
+						<h3>{$name}</h3>
 					</a>
 				</div>";
 	}

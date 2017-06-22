@@ -3,6 +3,12 @@ $(window).load(function() {
 	$(".se-pre-con").fadeOut("slow");;
 });
 
+function imgError(image) {
+	    	image.onerror = "";
+	    	image.src = "./media/oops.gif";
+	    	return true;
+		}
+
 function openNav() {
     document.getElementById ("mobileNav").style.width = "100%";
     document.getElementById("container").style.filter = "blur(5px)";

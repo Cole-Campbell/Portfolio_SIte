@@ -9,11 +9,16 @@ url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.svg#fontawe
 
 //HTML Elements
 body * {
-    transition: .3s;
     transition-timing-function: ease-out;
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
+}
+
+nav{
+    position: relative;
+    z-index: 10;
+    height: 38px;
 }
 
 a:link, a:active, a:visited { 
@@ -39,6 +44,7 @@ footer{
     width: 80%;
     clear: both;
     margin: 0px auto;
+    padding-bottom: 20px;
     hr{
         width: 80%;
         margin: 0px auto;
@@ -53,6 +59,65 @@ footer{
 }
 
 //End of HTML Elements
+
+//Banner Display
+
+#bannerTop{
+    height: 363px;
+    border-bottom: 1px solid $secondColor;
+    #banner{
+        width: 100%;
+        height: 400px;
+        background:tomato;
+        position: absolute;
+        z-index: -10;
+        display: block;
+        top: 0;
+        left: 0;
+        background: url('../../media/banner.jpg');
+        background-size: cover;
+        background-position-x: center;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:425px){
+    #bannerTop{
+        height: 463px;
+        #banner{
+            height: 500px;
+        }
+    }
+}
+
+@media screen and (min-width:1440px){
+    #bannerTop{
+        height: 563px;
+        #banner{
+            height: 600px;
+        }
+    }
+}
+
+//End of Banner Display
+
+//Gallery Item Display
+.galleryItem{
+    padding: 5px;
+    img{
+        border: 2px solid $secondColor;
+    }
+    
+    :hover{
+        color: $primeColor;
+        border-color: $primeColor;
+    }
+
+    h3{
+        text-align: center;
+    }
+}
+//End of Gallery Item Display
 
 //Social Media & Footer Content
 .socialMedia {
@@ -83,20 +148,3 @@ footer{
 }
 
 //End of Social Media & Footer Content
-
-//Gallery Item Display
-.galleryItem{
-    padding: 5px;
-    img{
-        border: 2px solid $secondColor;
-    }
-    
-    :hover{
-        color: $primeColor;
-        border-color: $primeColor;
-    }
-
-    h4{
-        text-align: center;
-    }
-}
