@@ -3,7 +3,7 @@
 	include_once('header.php');
 ?>
 
-	<div class="container">
+	<div class="flex-container">
 
 			<h2>Portfolio</h2>
 			<p>A collection of my work through the academic and professional career. The works displayed on here represent me both as a designer and a developer. I hope you enjoy the work showcased in my portfolio as much as I do. If you wish to contact me, please email me at <a href="mailto:cole@colecampbell.design?subject=Hello%20Cole">cole@colecampbell.design</a> and I will get back to you when I can.</p>
@@ -17,7 +17,7 @@
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		extract($row);
 
-		echo "<div id=\"gallery\" class=\"col-4 galleryItem\">
+		echo "<div id=\"gallery\" class=\"col-4 flex-galleryItem\">
 					<a href=\"portfolio.php?id={$id}\">
 						<img class=\"img-responsive thisImg center-block\" src=\"{$thumb}\" onerror=\"imgError(this);\" alt=\"{$name}\"/>
 						<h4>{$name}</h4>
