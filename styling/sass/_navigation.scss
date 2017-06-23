@@ -5,7 +5,7 @@
 	overflow: hidden;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
     a{
         position: relative;
         float: left;
@@ -16,9 +16,6 @@
         font-size: 17px;
         padding: 10px 10px 0px 10px;
 
-        &:active{
-            color: #d47163;
-        }
         &:before{
             content:"";
             position: absolute;
@@ -70,14 +67,15 @@
         display: block;
         float: right;
         position: absolute;
-        top: 15px;
-        right: 25px;
+        top: 20px;
+        right: 24px;
         font-size: 36px;
-        margin-left: 50px;
         i{
             color: #333;
         }
         i:hover{
+             -webkit-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
             color:$primeColor;
         }
     }
@@ -105,7 +103,7 @@
         }
         .closeBtn {
             position: absolute;
-            top: -10px;
+            top: 9px;
             right: 17px;
             font-size: 36px;
             margin-left: 50px;
@@ -114,8 +112,25 @@
         }
     }
 
-    .sideNavBtn:hover{
-        color: #333333;
-        background-color: #f8f8f8;
+    .sideNavBtn{
+         &:before{
+                content:"";
+                width: 80%;
+                position: absolute;
+                margin-top: 30px;
+                height: 2px;
+                background-color: #f8f8f8;
+                visibility: hidden;
+                transform-origin: left;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transition: all .3s ease-in-out 0s;
+                transition: all .3s ease-in-out 0s;
+            }
+            &:hover:before{
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
     }
 }

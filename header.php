@@ -70,15 +70,15 @@
 				</a>
 			</div>
 
-			<div class="topNav" id="main-top-nav" onscroll="checkScroll()">
+			<div class="topNav" id="main-top-nav">
 				<a class="links" href="./">Portfolio</a>
 				<a class="links" href="./about.php">About Me</a>
 				<a class="links" href="./contact.php">Contact Me</a>
 			</div>
+			</nav>
 			<div id="container">
 				<div class="menuBtn">
 					<a href="javascript:void(0);" class="icon" onclick="openNav()">
 						<i class="fa fa-bars"></i>
 					</a>
 				</div>
-			</nav>
