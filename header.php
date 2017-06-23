@@ -71,9 +71,11 @@
 			</div>
 
 			<div class="topNav" id="main-top-nav">
-				<a class="links" href="./">Portfolio</a>
-				<a class="links" href="./about.php">About Me</a>
-				<a class="links" href="./contact.php">Contact Me</a>
+				<div id="rightAlign">
+					<a class="links" href="./">Portfolio</a>
+					<a class="links" href="./about.php">About Me</a>
+					<a class="links" href="./contact.php">Contact Me</a>
+				</div>
 			</div>
 			</nav>
 			<div id="container">

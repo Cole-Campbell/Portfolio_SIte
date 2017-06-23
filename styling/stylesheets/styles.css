@@ -156,23 +156,29 @@ img {
 /*Navigation Menu*/
 /* line 4, ../sass/_navigation.scss */
 .topNav {
-  overflow: hidden;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  display: block;
+  width: 100%;
+  float: right;
+  position: relative;
+  top: 10px;
 }
-/* line 9, ../sass/_navigation.scss */
+/* line 10, ../sass/_navigation.scss */
+.topNav #rightAlign {
+  float: right;
+  margin-right: 20px;
+}
+/* line 14, ../sass/_navigation.scss */
 .topNav a {
   position: relative;
+  text-align: right;
   float: left;
   display: block;
   color: #333;
-  text-align: center;
   text-decoration: none;
   font-size: 17px;
   padding: 10px 10px 0px 10px;
 }
-/* line 19, ../sass/_navigation.scss */
+/* line 24, ../sass/_navigation.scss */
 .topNav a:before {
   content: "";
   position: absolute;
@@ -187,35 +193,35 @@ img {
   -webkit-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
 }
-/* line 33, ../sass/_navigation.scss */
+/* line 38, ../sass/_navigation.scss */
 .topNav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-/* line 39, ../sass/_navigation.scss */
+/* line 44, ../sass/_navigation.scss */
 .topNav .icon {
   display: none;
 }
 
-/* line 44, ../sass/_navigation.scss */
+/* line 49, ../sass/_navigation.scss */
 .menuBtn, .sideNav * {
   display: none;
 }
 
 /*Menu Media Queries*/
 @media screen and (max-width: 600px) {
-  /* line 51, ../sass/_navigation.scss */
+  /* line 56, ../sass/_navigation.scss */
   #main-top-nav * {
     display: none;
   }
 
-  /* line 55, ../sass/_navigation.scss */
+  /* line 60, ../sass/_navigation.scss */
   .sideNav * {
     display: block;
   }
 
-  /* line 59, ../sass/_navigation.scss */
+  /* line 64, ../sass/_navigation.scss */
   .navHolder {
     width: 100%;
     height: 30px;
@@ -223,7 +229,7 @@ img {
   }
 
   /*Navigation*/
-  /* line 66, ../sass/_navigation.scss */
+  /* line 71, ../sass/_navigation.scss */
   .menuBtn {
     display: block;
     float: right;
@@ -232,18 +238,18 @@ img {
     right: 24px;
     font-size: 36px;
   }
-  /* line 73, ../sass/_navigation.scss */
+  /* line 78, ../sass/_navigation.scss */
   .menuBtn i {
     color: #333;
   }
-  /* line 76, ../sass/_navigation.scss */
+  /* line 81, ../sass/_navigation.scss */
   .menuBtn i:hover {
     -webkit-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
     color: #d47163;
   }
 
-  /* line 83, ../sass/_navigation.scss */
+  /* line 88, ../sass/_navigation.scss */
   .sideNav {
     height: 100%;
     width: 0%;
@@ -256,7 +262,7 @@ img {
     padding-top: 60px;
     transition: 0.5s;
   }
-  /* line 94, ../sass/_navigation.scss */
+  /* line 99, ../sass/_navigation.scss */
   .sideNav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -267,7 +273,7 @@ img {
     width: 100%;
     min-width: 300px;
   }
-  /* line 104, ../sass/_navigation.scss */
+  /* line 109, ../sass/_navigation.scss */
   .sideNav .closeBtn {
     position: absolute;
     top: 9px;
@@ -278,7 +284,7 @@ img {
     min-width: 0;
   }
 
-  /* line 116, ../sass/_navigation.scss */
+  /* line 121, ../sass/_navigation.scss */
   .sideNavBtn:before {
     content: "";
     width: 80%;
@@ -293,7 +299,7 @@ img {
     -webkit-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
   }
-  /* line 130, ../sass/_navigation.scss */
+  /* line 135, ../sass/_navigation.scss */
   .sideNavBtn:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
@@ -361,6 +367,12 @@ img {
     width: 25%;
   }
 }
+/* line 1, ../sass/_portfolio.scss */
+.container {
+  height: auto;
+  width: 90%;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot");
@@ -380,32 +392,33 @@ body * {
 nav {
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
-/* line 23, ../sass/styles.scss */
+/* line 24, ../sass/styles.scss */
 a:link, a:active, a:visited {
   text-decoration: none;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 27, ../sass/styles.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 30, ../sass/styles.scss */
+/* line 31, ../sass/styles.scss */
 img {
   width: 100%;
   height: 100%;
 }
 
-/* line 35, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 p {
   font-family: 'Catamaran', sans-serif;
   font-weight: 300;
   font-size: 18px;
 }
 
-/* line 41, ../sass/styles.scss */
+/* line 42, ../sass/styles.scss */
 footer {
   min-width: 320px;
   width: 80%;
@@ -413,26 +426,32 @@ footer {
   margin: 0px auto;
   padding-bottom: 20px;
 }
-/* line 47, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 footer hr {
   width: 80%;
   margin: 0px auto;
 }
-/* line 51, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 footer p {
   text-align: center;
   font-size: 14px;
 }
-/* line 55, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 footer .fa-heart {
   color: #d47163;
 }
 
 /* line 64, ../sass/styles.scss */
+#container {
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+/* line 72, ../sass/styles.scss */
 #bannerTop {
   height: 400px;
 }
-/* line 66, ../sass/styles.scss */
+/* line 74, ../sass/styles.scss */
 #bannerTop #banner {
   width: 100%;
   height: 400px;
@@ -447,76 +466,76 @@ footer .fa-heart {
   background-position-x: center;
   overflow: hidden;
 }
-
 @media screen and (max-width: 425px) {
-  /* line 83, ../sass/styles.scss */
+  /* line 72, ../sass/styles.scss */
   #bannerTop {
     height: 500px;
   }
-  /* line 85, ../sass/styles.scss */
+  /* line 90, ../sass/styles.scss */
   #bannerTop #banner {
     height: 500px;
   }
 }
+
 @media screen and (min-width: 1440px) {
-  /* line 92, ../sass/styles.scss */
+  /* line 99, ../sass/styles.scss */
   #bannerTop {
     height: 600px;
   }
-  /* line 94, ../sass/styles.scss */
+  /* line 101, ../sass/styles.scss */
   #bannerTop #banner {
     height: 600px;
   }
 }
-/* line 103, ../sass/styles.scss */
+/* line 110, ../sass/styles.scss */
 .galleryItem {
   padding: 5px;
 }
-/* line 105, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 .galleryItem img {
   border: 2px solid #333;
 }
-/* line 109, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 .galleryItem :hover {
   color: #d47163;
   border-color: #d47163;
 }
-/* line 114, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .galleryItem h3 {
   text-align: center;
 }
 
-/* line 121, ../sass/styles.scss */
+/* line 128, ../sass/styles.scss */
 .socialMedia {
   text-align: center;
   padding: 10px 0px;
 }
-/* line 124, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 .socialMedia a {
   color: #333;
   margin: 5px;
 }
-/* line 128, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .socialMedia .fa-linkedin:hover {
   color: #0077B5;
 }
-/* line 131, ../sass/styles.scss */
+/* line 138, ../sass/styles.scss */
 .socialMedia .fa-github:hover {
   color: #6e5494;
 }
-/* line 134, ../sass/styles.scss */
+/* line 141, ../sass/styles.scss */
 .socialMedia .fa-twitter:hover {
   color: #55acee;
 }
-/* line 137, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 .socialMedia .fa-codepen:hover {
   color: #0ebeff;
 }
-/* line 140, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .socialMedia .fa-vimeo:hover {
   color: #00adef;
 }
-/* line 143, ../sass/styles.scss */
+/* line 150, ../sass/styles.scss */
 .socialMedia .fa-external-link:hover, .socialMedia .fa-envelope:hover {
   color: #d47163;
 }
