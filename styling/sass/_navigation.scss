@@ -7,6 +7,7 @@
     float: right;
     position: relative;
     top: 10px;
+    max-width: 1440px;
     #rightAlign{
         float: right;
         margin-right: 20px;
@@ -46,7 +47,7 @@
     }
 }
 
-.menuBtn, .sideNav *{
+#menuBtn, .sideNav *{
 	display: none;
 }
 
@@ -68,7 +69,9 @@
 	}
 
 	/*Navigation*/
-    .menuBtn{
+    #menuBtn{
+        -webkit-transition: all .3s ease-in-out 0s;
+        transition: all .3s ease-in-out 0s;
         display: block;
         float: right;
         position: absolute;

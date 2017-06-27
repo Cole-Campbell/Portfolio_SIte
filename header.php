@@ -6,7 +6,7 @@
 		if(isset($_GET['id'])){
 			$portfolio_id = $_GET['id'];
 		}
-		include_once('./db.php');
+		include_once('db.php');
 
 		$stmt = $conn->prepare("SELECT * FROM development WHERE id = :id");
 
@@ -59,12 +59,13 @@
 	</head>
 	
 	<body>
+		<div id="border">
 		<div class="se-pre-con"></div>
 		<nav>
 			<div class="sideNav" id="mobileNav">
 				<a class="sideNavBtn" href="./">Portfolio</a>
 				<a class="sideNavBtn" href="./about.php">About Me</a>
-				<a class="sideNavBtn">Contact Me</a>
+				<a class="sideNavBtn" href="./contact.php">Contact Me</a>
 				<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
 						<i class="fa fa-times"></i>
 				</a>
@@ -77,10 +78,10 @@
 					<a class="links" href="./contact.php">Contact Me</a>
 				</div>
 			</div>
-			</nav>
-			<div id="container">
-				<div class="menuBtn">
+			<div id="menuBtn">
 					<a href="javascript:void(0);" class="icon" onclick="openNav()">
 						<i class="fa fa-bars"></i>
 					</a>
 				</div>
+			</nav>
+			<div id="container">

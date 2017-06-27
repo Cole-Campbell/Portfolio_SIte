@@ -3,10 +3,10 @@
 	include_once('header.php');
 ?>
 
-<section id="bannerTop">
+<!--<section id="bannerTop">
 	<div id="banner">
 	</div>
-</section>
+</section>-->
 
 	<div class="flex-container">
 
@@ -22,9 +22,9 @@
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		extract($row);
 
-		echo "<div id=\"gallery\" class=\"col-4 flex-galleryItem\">
+		echo "<div class=\"flex-galleryItem\">
 					<a href=\"portfolio.php?id={$id}\">
-						<img class=\"img-responsive thisImg center-block\" src=\"{$thumb}\" onerror=\"imgError(this);\" alt=\"{$name}\"/>
+						<img src=\"{$thumb}\" onerror=\"imgError(this);\" alt=\"{$name}\"/>
 						<h3>{$name}</h3>
 					</a>
 				</div>";

@@ -5,7 +5,7 @@
 	include_once('header.php');
 ?>
 
-	<div class="container">
+	<div class="flex-container">
 
 <?php
 	#Setting up the query to go through the database and pull the content for my portfolio. THe content will then be added to the HTML tags to be displayed to the user.
@@ -36,31 +36,31 @@
 		} else{ }
 
 		if($vimeoLink != null){
-			$vimLink = "<a href=\"{$vimLink}\" target=\"_blank\"><i class=\"fa fa-vimeo fa-2x\"></i></a>";
+			$vimLink = "<a href=\"{$vimeoLink}\" target=\"_blank\"><i class=\"fa fa-vimeo fa-2x\"></i></a>";
 		} else{ }
 
 
-		echo "<h2>{$name}</h2>
-			<h6>{$type}</h6>
-			<p><a href=\"./\">&laquo; Back Home</a></p>
-				<div class=\"col-sm-10 col-sm-push-1\">";
+		echo "<div id=\"topPortfolio\">
+			<h1>{$name}</h1>
+			<h6>{$type}</h6>";
 
 		if($filetype == "image"){
-			echo "<img class=\"img-responsive center-block\" src=\"{$url}\" alt=\"{$name}\">";
+			echo "<img class=\"centerContent\" src=\"{$url}\" alt=\"{$name}\">";
 		} elseif ($filetype == "video"){
-			echo "<iframe id=\"videoPlayer\" src=\"{$url}\" allowfullscreen></iframe>";
+			echo "<iframe class=\"centerVideoContent\" src=\"{$url}\" allowfullscreen></iframe>";
 		} elseif($filetype == "web"){
-			echo "<a href=\"{$externalLink}\" target=\"_blank\"><img class=\"img-responsive center-block\" src=\"{$url}\" alt=\"{$name}\"></a>";	
+			echo "<a href=\"{$externalLink}\" target=\"_blank\"><img class=\"centerContent\" src=\"{$url}\" alt=\"{$name}\"></a>";	
 		} else {
-			echo "<a href=\"{$url}.pdf\" target=\"_blank\"><img class=\"img-responsive center-block\" src=\"{$url}.jpg\" alt=\"{$name}\"></a> ";
+			echo "<a href=\"{$url}.pdf\" target=\"_blank\"><img class=\"centerContent\" src=\"{$url}.jpg\" alt=\"{$name}\"></a> ";
 		}
+		
+		echo "<hr/></div>";
 
 #Add this once all descriptions have been added to the database.
 
 			echo "
-			<div class=\"col-sm-10 col-sm-push-1 description\">
-			<hr/>
-				<p class=\"socialMedia text-center\" >";
+			<div>
+				<p class=\"socialMedia\">";
 					
 					if(isset($codeLink)){
 						echo"{$codeLink}";
@@ -75,7 +75,9 @@
 						echo"{$extLink}";
 					}
 				echo "</p>
+				<div id=\"desc\">
 					{$desc}
+				</div>
 				</div>
 			</div>";
 
