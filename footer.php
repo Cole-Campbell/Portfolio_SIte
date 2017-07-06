@@ -1,26 +1,21 @@
 <footer>
-	<hr>
 	<div class="socialMedia">
 		<p>
-			<a href="https://github.com/Cole-Campbell" target="_blank">
-				<i class="fa fa-github fa-2x"></i>
+			<a href="https://github.com/Cole-Campbell" id="githubSocial" target="_blank">
+				Github
 			</a>
-			<a href="https://twitter.com/colewcampbell" target="_blank">
-				<i class="fa fa-twitter fa-2x"></i>
+			<a href="https://twitter.com/colewcampbell" id="twitterSocial" target="_blank">
+				Twitter
 			</a>
-			<a href="mailto:cole@colecampbell.design?subject=Hello%20Cole!">
-				<i class="fa fa-envelope fa-2x"></i>
-			</a>
-			<a href="https://ie.linkedin.com/in/colewcampbell" target="_blank">
-				<i class="fa fa-linkedin fa-2x"></i>
-			</a>
-			<a href="http://codepen.io/Cole-Campbell" target="_blank">
-				<i class="fa fa-codepen fa-2x"></i>
+			<a href="https://ie.linkedin.com/in/colewcampbell" id="linkedinSocial" target="_blank">
+				LinkedIn
 			</a>
 		</p>
 	</div>
+	<div id="madeBy">
 		<p><i><i class="fa fa-code fa-lg"></i> with <i class="fa fa-heart"></i> by Cole.</i></p>
-	</footer>
-</div>
+		<p id="copyright"><i>Copyright &copy; 2017 Cole Campbell</i></p>
+	</div>
+</footer>
 </body>
 </html>

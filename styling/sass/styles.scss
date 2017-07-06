@@ -1,15 +1,11 @@
 //Internal Imports
-@import 'variables', 'reset', 'sizing', 'loader', 'navigation', 'flex', 'about', 'portfolio', 'contact';
+@import 'variables', 'reset', 'loader', 'navigation', 'flex', 'about', 'portfolio', 'contact';
 //External Imports
-@import url('//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css');@font-face{font-family:'FontAwesome';src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot');src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
-url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
-url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.ttf') format('truetype'),
-url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');font-weight:normal;font-style:normal;};
+@import url('//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css');@font-face{font-family:'FontAwesome';src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot');src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype')};
 
 //HTML Elements
 HTML{
-    background-color:#e2e2e2;
+    background-color:lightColor;
 }
 body * {
     transition-timing-function: ease-out;
@@ -19,17 +15,16 @@ body * {
 }
 
 body{
-    padding: 10px;
     @media screen and (max-width: 425px) {
         padding: 0px;
     }
 }
 
-nav{
+#mobileFix{
     position: relative;
+    top: 0;
+    left: 0;
     z-index: 10;
-    width: 100%;
-    height: 50px;
 }
 
 a:link, a:active, a:visited { 
@@ -51,20 +46,28 @@ p{
 }
 
 footer{
-    min-width: 320px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 150px;
     width: 100%;
+    background: $darkColor;
     clear: both;
-    margin: 0px auto;
-    padding: 20px 0px;
-    hr{
-        width: 80%;
-        margin: 0px auto;
-        color: $lightColor;
-    }
-    p{
+    margin: 0px auto 0px auto;
+    #madeBy {
+        width: 100%;
+        height: auto;
+        display: block;
         text-align: center;
-        font-size: 14px;
-        color: $darkColor;
+        position: absolute;
+        top: 60%;
+        p{
+            color: $lightColor;
+            font-size: 14px;
+        }
+        #copyright{
+            font-size: 12px;
+        }
     }
     .fa-heart{
         color: $primeColor;
@@ -88,97 +91,125 @@ footer{
 //Banner Display
 
 #bannerTop{
-    height: 400px;
-    #banner{
+    height: 75vh;
+    min-height: 400px;
+    position: relative;
+    top: 0;
+    left: 0;
+    #bannerImage{
         width: 100%;
-        height: 400px;
-        background:tomato;
+        height: 75vh;
+        min-height: 400px;
         position: absolute;
         z-index: -10;
         display: block;
         top: 0;
         left: 0;
-        background: url('../../media/banner.jpg');
-        background-size: cover;
-        background-position-x: center;
+        background-color: $primeColor;
+        transition: background-color .5s linear;
+        -webkit-transition: background-color .5s linear;
         overflow: hidden;
     }
-    @media screen and (max-width:425px){
-        height: 500px;
-        #banner{
-            height: 500px;
+    #bannerHome{
+        width: 100%;
+        height: 75vh;
+        min-height: 400px;
+        position: absolute;
+        z-index: -10;
+        display: block;
+        top: 0;
+        left: 0;
+        background-color: $primeColor;
+        transition: background-color .5s linear;
+        -webkit-transition: background-color .5s linear;
+        overflow: hidden;
+        &::before{
+            mix-blend-mode: screen;
+        }
+        #bannerText{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            width: 95%;
+            h1{
+                color: $lightColor;
+                font-size: 3em;
+                font-weight: 300;
+                mix-blend-mode: none;
+            }
+            h2{
+                color: $lightColor;
+                font-size: 1.3em;
+                font-weight: 400;
+            }
         }
     }
-}
-
-
-
-@media screen and (min-width:1440px){
-    #bannerTop{
-        height: 600px;
-        #banner{
-            height: 600px;
+    @media screen and (max-width: 500px){
+        height: 50vh;
+        min-height: 300px;
+        #bannerHome{
+            height:50vh;
+            min-height: 300px;
+        }
+        #bannerImage{
+            height: 50vh;
+            min-height: 300px;
         }
     }
 }
 
 //End of Banner Display
 
-//Gallery Item Display
-.galleryItem{
-    padding: 5px;
-    img{
-        border: 2px solid $darkColor;
-    }
-    
-    :hover{
-        color: $primeColor;
-        border-color: $primeColor;
-    }
+//Portfolio Section
 
-    h3{
-        text-align: center;
+#portfolioSection{
+    background-color: $darkColor;
+    color: $lightColor;
+    width: 100%;
+    padding: 30px 0px;
+    h2{
+        width: 90%;
+        margin: 0px auto;
+        text-align: left;
+    }
+    p{
+        color: $lightColor;
+        width: 90%;
+        margin: 0px auto;
+    }
+    a{
+        cursor: pointer;
     }
 }
-//End of Gallery Item Display
 
 //Social Media & Footer Content
 .socialMedia {
     text-align: center;
-    padding: 10px 0px;
+    padding: 30px 0px;
+    text-transform: uppercase;
+    font-family: 'Catamaran', 'sans-serif';
+    font-weight: 500;
     a{
-        color: $darkColor;
-        margin: 5px;
+        color: $lightColor;
+        margin: 15px;
     }
-    .fa-linkedin:hover{
+    #linkedinSocial:hover{
         color: #0077B5;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
+        -webkit-transition: .3s linear;
+        transition: .3s linear;
     }
-    .fa-github:hover{
+    #githubSocial:hover{
         color: #6e5494;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
+        -webkit-transition: .3s linear;
+        transition: .3s linear;
     }
-    .fa-twitter:hover{
+    #twitterSocial:hover{
         color: #55acee;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
-    }
-    .fa-codepen:hover{
-        color: #0ebeff;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
-    }
-    .fa-vimeo:hover{
-        color: #00adef;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
-    }
-    .fa-external-link:hover, .fa-envelope:hover{
-        color: $primeColor;
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition: all .3s ease-in-out 0s;
+        -webkit-transition: .3s linear;
+        transition: .3s linear;
     }
 }
 

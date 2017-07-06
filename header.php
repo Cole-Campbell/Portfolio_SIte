@@ -59,15 +59,13 @@
 	</head>
 	
 	<body>
-		<div id="border">
 		<div class="se-pre-con"></div>
-		<nav>
 			<div class="sideNav" id="mobileNav">
 				<a class="sideNavBtn" href="./">Portfolio</a>
 				<a class="sideNavBtn" href="./about.php">About Me</a>
 				<a class="sideNavBtn" href="./contact.php">Contact Me</a>
 				<a href="javascript:void(0);" class="closeBtn" onclick="closeNav()">
-						<i class="fa fa-times"></i>
+					<p>Close</p>
 				</a>
 			</div>
 
@@ -80,8 +78,7 @@
 			</div>
 			<div id="menuBtn">
 					<a href="javascript:void(0);" class="icon" onclick="openNav()">
-						<i class="fa fa-bars"></i>
+						<p>Menu</p>
 					</a>
 				</div>
-			</nav>
 			<div id="container">

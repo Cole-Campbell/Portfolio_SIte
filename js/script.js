@@ -26,3 +26,30 @@ window.onresize = function (){
         closeNav();
     }
 }
+
+    var d;
+    var h;
+    var m;
+    var s;
+
+function setTime(){
+    d = new Date();
+    h = d.getHours();
+    m = d.getMinutes();
+    s = d.getSeconds();
+};
+
+function colorChange(){
+    var timeRed = 6.25*h;
+    var timeGreen = 2.5*m;
+    var timeBlue = 2.5*s;
+
+    var c = "rgba("+Math.round(timeRed)+","+Math.round(timeGreen)+","+Math.round(timeBlue)+",.7)";
+    document.getElementById("bannerHome").style.backgroundColor = c;
+    console.log(c);
+};
+
+window.setInterval(function(){
+    setTime();
+    colorChange();
+}, 1000);
