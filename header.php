@@ -6,7 +6,7 @@
 		if(isset($_GET['id'])){
 			$portfolio_id = $_GET['id'];
 		}
-		include_once('db.php');
+		include_once('../db.php');
 
 		$stmt = $conn->prepare("SELECT * FROM development WHERE id = :id");
 
@@ -51,11 +51,7 @@
 
 		<script async src="./js/script.js"></script>
 
-		<!-- Latest compiled and minified CSS -->
-		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-
-		<link rel="stylesheet" href="./styling/stylesheets/styles.css">
-		<link rel="stylesheet" href="./css/font-awesome.css">
+		<link rel="stylesheet" href="./css/styles.min.css">
 	</head>
 	
 	<body>

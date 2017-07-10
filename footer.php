@@ -17,5 +17,8 @@
 		<p id="copyright"><i>Copyright &copy; 2017 Cole Campbell</i></p>
 	</div>
 </footer>
+<?php
+	include_once("../analytics.php");
+?>
 </body>
 </html>
