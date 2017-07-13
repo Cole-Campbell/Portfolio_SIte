@@ -1,16 +1,14 @@
 //Internal Imports
 @import 'variables', 'reset', 'loader', 'navigation', 'flex', 'about', 'portfolio', 'contact';
-//External Imports
-@import url('//use.fontawesome.com/releases/v4.7.0/css/font-awesome-css.min.css');@font-face{font-family:'FontAwesome';src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot');src:url('//use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype')};
 
 //HTML Elements
 HTML{
     background-color:lightColor;
 }
 body * {
+    -webkit-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
     box-sizing: border-box;
 }
 
@@ -78,6 +76,7 @@ footer{
 
 //Page Container & Wrapper
 #container{
+    -ms-transition: all .3s ease-in-out 0s;
     -webkit-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
 }
@@ -106,8 +105,9 @@ footer{
         top: 0;
         left: 0;
         background-color: $primeColor;
-        transition: background-color .5s linear;
+        -ms-transition: background-color .5s linear;
         -webkit-transition: background-color .5s linear;
+        transition: background-color .5s linear;
         overflow: hidden;
     }
     #bannerHome{
@@ -120,8 +120,9 @@ footer{
         top: 0;
         left: 0;
         background-color: $primeColor;
-        transition: background-color .5s linear;
+        -ms-transition: background-color .5s linear;
         -webkit-transition: background-color .5s linear;
+        transition: background-color .5s linear;
         overflow: hidden;
         &::before{
             mix-blend-mode: screen;
@@ -132,6 +133,8 @@ footer{
             left: 50%;
             display: block;
             text-align: center;
+            -ms-transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
             width: 95%;
             h1{
@@ -198,16 +201,19 @@ footer{
     }
     #linkedinSocial:hover{
         color: #0077B5;
+        -ms-transition: .3s linear;
         -webkit-transition: .3s linear;
         transition: .3s linear;
     }
     #githubSocial:hover{
         color: #6e5494;
+        -ms-transition: .3s linear;
         -webkit-transition: .3s linear;
         transition: .3s linear;
     }
     #twitterSocial:hover{
         color: #55acee;
+        -ms-transition: .3s linear;
         -webkit-transition: .3s linear;
         transition: .3s linear;
     }

@@ -13,7 +13,7 @@
 		</p>
 	</div>
 	<div id="madeBy">
-		<p><i><i class="fa fa-code fa-lg"></i> with <i class="fa fa-heart"></i> by Cole.</i></p>
+		<p>Made with love by <a href="about">Cole</a>.</p>
 		<p id="copyright"><i>Copyright &copy; 2017 Cole Campbell</i></p>
 	</div>
 </footer>
